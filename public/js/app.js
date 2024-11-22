@@ -16,7 +16,7 @@ $(function () {
         $.ajax({
             type: 'GET',
             dataType: 'json',
-            url: '/select_tables/' + conn + '/' + host + '/' + port + '/' + database + '/' + username + '/' + pass + '/' + schema,
+            url: '/select_tables/' + conn + '/' + host + '/' + port + '/' + database + '/' + username + '/' + encodeURIComponent(pass) + '/' + schema,
             beforeSend: function () {
                 if (!conn || !host || !port || !database || !username || !pass || !schema)
                     return false;
@@ -50,7 +50,7 @@ $(function () {
         $.ajax({
             type: 'GET',
             dataType: 'json',
-            url: '/select_schemas/' + conn + '/' + host + '/' + port + '/' + database + '/' + username + '/' + pass + '/',
+            url: '/select_schemas/' + conn + '/' + host + '/' + port + '/' + database + '/' + username + '/' + encodeURIComponent(pass) + '/',
             beforeSend: function () {
                 if (!conn || !host || !port || !database || !username || !pass)
                     return false;
