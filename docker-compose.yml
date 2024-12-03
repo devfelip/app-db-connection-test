@@ -6,10 +6,6 @@ services:
     container_name: app-db-connection-test
     ports:
       - "80:80"
-    volumes:
-      - ./:/usr/share/nginx/html
-      - ./docker/nginx_conf:/etc/nginx/conf.d
-      - ./docker/php.ini:/etc/php/8.0/fpm/php.ini
     networks:
       - default
       - interdocker
