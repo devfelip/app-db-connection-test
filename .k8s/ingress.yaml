@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-app-db-connection-test
+spec:
+  rules:
+    - host: db-connection.127.0.0.1.nip.io    # Você pode configurar o nome de domínio desejado
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: app-db-connection-test-service  # Nome do seu serviço Kubernetes
+                port:
+                  number: 80  # Porta exposta pelo serviço

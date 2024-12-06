@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-db-connection-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-db-connection-test
+  template:
+    metadata:
+      labels:
+        app: app-db-connection-test
+    spec:
+      containers:
+      - name: app
+        image: felipecs8/app-db-connection-test:v1
+        ports:
+        - containerPort: 80
