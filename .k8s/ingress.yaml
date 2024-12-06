@@ -4,7 +4,7 @@ metadata:
   name: ingress-app-db-connection-test
 spec:
   rules:
-    - host: movies.127.0.0.1.nip.io    # Você pode configurar o nome de domínio desejado
+    - host: db-connection.127.0.0.1.nip.io    # Você pode configurar o nome de domínio desejado
       http:
         paths:
           - path: /
